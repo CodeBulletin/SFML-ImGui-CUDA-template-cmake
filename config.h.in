@@ -1,0 +1,17 @@
+#define MAJOR_VERSION @SFMLTemplate_VERSION_MAJOR@
+#define MINOR_VERSION @SFMLTemplate_VERSION_MINOR@
+#define PATCH_VERSION @SFMLTemplate_VERSION_PATCH@
+
+#define NAME "@PROJECT_NAME@"
+#define DESCRIPTION "@SFMLTemplate_DESCRIPTION@"
+#define AUTHOR "@SFMLTemplate_AUTHOR@"
+#define WEBSITE "@SFMLTemplate_HOMEPAGE_URL@"
+#define LICENSE "@SFMLTemplate_LICENSE@"
+
+#define DEBUG_MODE @DEBUG_MODE@
+#define LOG_LEVEL @LOG_LEVEL@
+
+#define LOG_INFO 3
+#define LOG_WARNING 2
+#define LOG_ERROR 1
+#define LOG_NONE 0
