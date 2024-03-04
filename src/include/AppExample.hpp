@@ -26,7 +26,10 @@ public:
         i += 1.0f/2.0f * frameTime;
         if (i > 1.0f)
             i = 0.0f;
+    }
 
-        window.display();
+    void ui() override
+    {
+        ImGui::ShowDemoWindow();
     }
 };

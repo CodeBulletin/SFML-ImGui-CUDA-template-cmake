@@ -8,6 +8,8 @@
 #include <cmath>
 
 #include <SFH/Noncopyable.hpp>
+#include <imgui.h>
+#include <imgui-SFML.h>
 
 namespace sfh
 {
@@ -17,8 +19,10 @@ namespace sfh
 		App() = default;
 		~App()
 		{
-			if (window.isOpen())
+			if (window.isOpen()) {
 				window.close();
+				ImGui::SFML::Shutdown();
+			}
 		}
 
 		virtual void create_window(sf::Vector3<uint32_t> size)
@@ -32,6 +36,10 @@ namespace sfh
 			height = vid.size.y;
 
 			window.setVerticalSyncEnabled(true);
+
+			if (!ImGui::SFML::Init(window)) {
+				throw std::runtime_error("Failed to initialize ImGui-SFML");
+			}
 		}
 
 		virtual void run()
@@ -44,14 +52,20 @@ namespace sfh
 				frameRate = std::round(1.0f / frameTime);
 				while (window.pollEvent(event))
 				{
+					ImGui::SFML::ProcessEvent(window, event);
 					eventManager();
 				}
 				loop();
+				ImGui::SFML::Update(window, sf::seconds(frameTime));
+				ui();
+				ImGui::SFML::Render(window);
+				window.display();	
 			}
 		}
 
 		virtual void setup() = 0;
 		virtual void loop() = 0;
+		virtual void ui() = 0;
 
 		virtual void Close()
 		{

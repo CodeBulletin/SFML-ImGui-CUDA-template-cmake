@@ -9,6 +9,3 @@
 	path = external/ImGui-SFML
 	url = https://github.com/SFML/imgui-sfml
 	branch = master
-[submodule "external/glew"]
-	path = external/glew
-	url = https://github.com/nigels-com/glew
