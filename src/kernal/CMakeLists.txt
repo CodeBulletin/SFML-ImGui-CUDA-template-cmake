@@ -8,7 +8,7 @@ add_library(kernal
 )
 
 target_include_directories (kernal PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/kernal
 )
 
 set_target_properties(kernal PROPERTIES

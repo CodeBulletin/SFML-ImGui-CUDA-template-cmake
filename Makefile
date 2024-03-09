@@ -31,3 +31,8 @@ clear-scr:
 benchmark:
 	@ echo "Running benchmark..."
 	@ hyperfine --warmup 3 './build/$(BuildType)/main' --export-markdown benchmark.md
+
+install:
+
+uninstall:
+	

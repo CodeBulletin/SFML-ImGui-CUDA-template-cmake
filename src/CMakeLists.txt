@@ -30,7 +30,7 @@ endif()
 target_include_directories(
     main
     PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-    PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/kernal/include"
+    PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/kernal/"
 )
 
 target_link_libraries(
