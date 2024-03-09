@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/build/Debug",
                 "${workspaceFolder}/build/Release",
-                "${workspaceFolder}/external/SFML/include"
+                "${workspaceFolder}/external/SFML/include",
+                "${workspaceFolder}/src/kernel/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

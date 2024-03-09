@@ -1,4 +1,5 @@
 #include <config.h>
+
 #include "AppExample.hpp"
 
 #if defined(LOG_LEVEL) && LOG_LEVEL > 0
@@ -22,6 +23,7 @@ int main() {
     AppExample app = AppExample(std::string(NAME), 800, 600, sf::Style::Default, sf::State::Windowed);
 
     app.run();
+
 
     return 0;
 }

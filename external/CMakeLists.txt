@@ -27,17 +27,10 @@ message(STATUS "SFML_DIR: ${SFML_DIR}")
 
 add_subdirectory(ImGui-SFML)
 
-#GLEW
-
-add_subdirectory(glew/build/cmake)
-
-
-
 target_include_directories(external INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}/SFML/include
     ${CMAKE_CURRENT_SOURCE_DIR}/ImGui-SFML
     ${CMAKE_CURRENT_SOURCE_DIR}/ImGui
-    ${CMAKE_CURRENT_SOURCE_DIR}/glew/include
 )
 
 target_link_libraries(external INTERFACE
@@ -46,5 +39,4 @@ target_link_libraries(external INTERFACE
     sfml-system
     ImGui
     ImGui-SFML::ImGui-SFML
-    glew32s
 )
