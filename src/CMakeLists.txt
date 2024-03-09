@@ -2,8 +2,6 @@ file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
 add_executable(main ${SOURCES})
 
-add_subdirectory(kernal)
-
 set_target_properties(main PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
@@ -30,10 +28,4 @@ endif()
 target_include_directories(
     main
     PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-    PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/kernal/"
-)
-
-target_link_libraries(
-    main
-    PUBLIC kernal
 )

@@ -31,7 +31,9 @@ configure_file(
 
 add_subdirectory(external)
 
+add_subdirectory(gpgpu)
+
 add_subdirectory(src)
 
-target_link_libraries(main PRIVATE external)
-target_include_directories(main PRIVATE ${PROJECT_BINARY_DIR})
+target_link_libraries(main PRIVATE external kernal)
+target_include_directories(main PRIVATE ${PROJECT_BINARY_DIR} ${PROJECT_SOURCE_DIR}/gpgpu)
